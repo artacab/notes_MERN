@@ -1,9 +1,8 @@
 const {Router} = require('express')
 const User = require('../models/User')
-const User = require('../models/User')
 const router = Router()
 
-router.post('/registration', (req, res) => {
+router.post('/registration', async (req, res) => {
     try {
         const {email, password} = req.body
         const isUser = await User.findOne({email})
@@ -20,7 +19,7 @@ router.post('/registration', (req, res) => {
         res.status(201).json({message: 'user is create!'})
 
     } catch(error) {
-        console.log(error)
+        console.log('cee')
     }
 })
 

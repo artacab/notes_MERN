@@ -20,7 +20,7 @@ async function start() {
             console.log(`server on port ${PORT}`)
         })
     } catch (e) {
-        console.log(e)
+        console.log('vuyvytv')
     }
 }
 
