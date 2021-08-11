@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5000
 app.use(express.json({extended: true}))
 
 app.use('/api/auth', require('./routes/auth.route'))
+app.use('/api/todo', require('./routes/todo.route'))
 
 async function start() {
     try {
@@ -19,8 +20,8 @@ async function start() {
         app.listen(PORT, () => {
             console.log(`server on port ${PORT}`)
         })
-    } catch (e) {
-        console.log('vuyvytv')
+    } catch (error) {
+        console.log(error)
     }
 }
 
